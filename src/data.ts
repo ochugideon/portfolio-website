@@ -62,8 +62,8 @@ export const PROJECTS: Project[] = [
     longDescription: 'A high-fidelity client-side e-commerce store engine. It includes multi-faceted product filtering (by brand, price range, and rating), a responsive dynamic cart drawer, localized checkout validation, and high-performance loading state skeletons.',
     image: ecommerceSuite, // Premium, clean tech image
     techStack: ['React.js', 'JavaScript', 'HTML5', 'CSS Particles'],
-    githubUrl: 'https://github.com/leocarter-dev/nexus-store',
-    liveUrl: '#',
+    githubUrl: 'https://github.com/ochugideon/teens-church-website',
+    liveUrl: 'https://teens-church-website.netlify.app',
     category: 'Full-Stack / Frontend',
     featured: true,
   },
