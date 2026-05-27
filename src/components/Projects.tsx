@@ -155,7 +155,7 @@ export default function Projects() {
                         <span>Read Case Study</span>
                       </button>
 
-                      <div className="flex items-center space-x-3">
+                      <div className="flex items-center space-x-2">
                         <a
                           href={project.githubUrl}
                           target="_blank"
@@ -165,13 +165,27 @@ export default function Projects() {
                         >
                           <Github className="w-4 h-4" />
                         </a>
-                        <button
-                          onClick={() => setSelectedProject(project)}
-                          className="p-2 rounded-lg bg-black/40 border border-white/10 hover:bg-white/10 hover:text-blue-400 text-gray-400 hover:scale-105 active:scale-95 transition-all focus:outline-none"
-                          title="View Live Demo Details"
-                        >
-                          <ExternalLink className="w-4 h-4" />
-                        </button>
+                        {project.liveUrl && project.liveUrl !== '#' ? (
+                          <a
+                            href={project.liveUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-2 px-3 rounded-lg bg-blue-600/15 border border-blue-500/20 text-blue-400 hover:bg-blue-600/30 hover:text-white text-xs font-semibold hover:scale-105 active:scale-95 transition-all focus:outline-none flex items-center space-x-1"
+                            title="Checkout Website"
+                          >
+                            <ExternalLink className="w-3.5 h-3.5" />
+                            <span>Checkout Website</span>
+                          </a>
+                        ) : (
+                          <button
+                            onClick={() => setSelectedProject(project)}
+                            className="p-2 px-3 rounded-lg bg-black/40 border border-white/10 hover:bg-white/10 hover:text-blue-400 text-gray-400 hover:scale-105 active:scale-95 transition-all focus:outline-none flex items-center space-x-1"
+                            title="View Case Study Details"
+                          >
+                            <ExternalLink className="w-3.5 h-3.5" />
+                            <span>Read Details</span>
+                          </button>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -272,15 +286,25 @@ export default function Projects() {
                     <span>View Repository Source</span>
                   </a>
 
-                  <a
-                    href={selectedProject.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center space-x-2 w-full px-5 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-semibold text-xs uppercase tracking-wider transition-all shadow-md shadow-blue-500/15 focus:outline-none cursor-pointer"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                    <span>Launch Live Demo</span>
-                  </a>
+                  {selectedProject.liveUrl && selectedProject.liveUrl !== '#' ? (
+                    <a
+                      href={selectedProject.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center space-x-2 w-full px-5 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-semibold text-xs uppercase tracking-wider transition-all shadow-md shadow-blue-500/15 focus:outline-none cursor-pointer"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      <span>Checkout Website</span>
+                    </a>
+                  ) : (
+                    <button
+                      className="flex items-center justify-center space-x-2 w-full px-5 py-3 rounded-xl bg-white/5 border border-white/5 text-slate-500 font-semibold text-xs uppercase tracking-wider cursor-not-allowed"
+                      disabled
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      <span>No Live Website</span>
+                    </button>
+                  )}
                 </div>
               </div>
             </motion.div>
