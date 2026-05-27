@@ -9,7 +9,7 @@ export const DEVELOPER_PROFILE = {
   whatsapp: '+234 8084987258',
   location: 'Uyo, Nigeria (Open Remotely)',
   github: 'https://github.com/ochugideon',
-  linkedin: 'https://linkedin.com/in/ochugideon',
+  linkedin: 'https://linkedin.com/in/gideon-ochu-34521b412',
   twitter: 'https://twitter.com/ochugideon',
   tagline: 'Building responsive, clean frontend interfaces with React and writing reliable backend routes with FastAPI.',
   avatarUrl: developerAvatar, // The generated premium 3D avatar

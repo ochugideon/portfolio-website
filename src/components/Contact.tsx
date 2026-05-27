@@ -199,7 +199,7 @@ export default function Contact() {
                     >
                       <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0" />
                       <div>
-                        <span className="font-bold">Thank you!</span> Your communication has been dispatched. Leo Carter will follow up with you shortly.
+                        <span className="font-bold">Thank you!</span> Your communication has been dispatched. {DEVELOPER_PROFILE.name} will follow up with you shortly.
                       </div>
                     </motion.div>
                   )}
@@ -218,7 +218,7 @@ export default function Contact() {
                           ? 'border-red-500 focus:border-red-500 focus:ring-1 focus:ring-red-500'
                           : 'border-white/10 focus:border-blue-500 focus:ring-1 focus:ring-blue-500'
                       }`}
-                      placeholder="e.g. Liam Anderson"
+                      placeholder="e.g. Peterson  Chinedu"
                       value={formData.name}
                       onChange={(e) => handleInputChange('name', e.target.value)}
                     />
